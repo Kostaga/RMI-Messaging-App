@@ -58,8 +58,7 @@ public class Client {
                     } else if (authToken == 0) {
                         System.out.println("Username already exists");
                     } else {
-                        System.out.println("Account created successfully");
-                        System.out.println("Auth Token: " + authToken);
+                        System.out.println(authToken);
                     }
                     break;
 
