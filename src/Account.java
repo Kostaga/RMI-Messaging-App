@@ -1,0 +1,39 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Account implements java.io.Serializable {
+
+    private final String username;
+    private final int authToken;
+    private final List<Message> messageBox;
+
+    public Account(String username, int authToken) {
+        this.username = username;
+        this.authToken = authToken;
+        messageBox = new ArrayList<>();
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public int getAuthToken() {
+        return authToken;
+    }
+
+    public List<Message> getMessageBox() {
+        return messageBox;
+    }
+
+    public void addMessage(Message message) {
+        messageBox.add(message);
+    }
+
+    public void removeMessage(Message message) {
+        messageBox.remove(message);
+    }
+
+    public String toString() {
+        return "Username: " + username + "\nAuth Token: " + authToken;
+    }
+}
